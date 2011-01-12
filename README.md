@@ -3,11 +3,11 @@ ChromeFTP
 
 A complete FTP client extension for Google Chrome.
 
-How does it work?
+Technical Details
 -----------------
 
-This extension uses a NPAPI plugin for accessing the underlying OS file system and socket, as this is not possible with HTML5 only. 
-The NPAPI plugin is developed with C++ using the Boost library.
+This extension uses a NPAPI plugin for accessing the underlying OS file system and socket, as this is not possible with HTML5 alone. It is wrriten with C++ and using the Boost library. The NPAPI plugin exposes methods to the extension JavaScript with [Nixysa][2] - a framework for generating glue code for NPAPI plugins.
+
 
 Contributing
 ------------
