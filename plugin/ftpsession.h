@@ -12,16 +12,16 @@ class FtpSession {
 	public:
 		class EmptyCallback {
 			public: 
-				virtual void Run() = 0; 
+				virtual void Run(); 
 		};
 		
 		class ErrorCallback {
 			public:
-				virtual void Run(std::string message) = 0;
+				virtual void Run(std::string message);
 		};
 
 		FtpSession();
-		 ~FtpSession();
+		~FtpSession();
 
 		void Connect(std::string& server, EmptyCallback *connectCallback, ErrorCallback *errorCallback);
 
@@ -35,8 +35,8 @@ class FtpSession {
 		tcp::resolver *resolver_;
 		tcp::socket *socket_;
 
-		boost::asio::streambuf request_;
-		boost::asio::streambuf response_;
+		// boost::asio::streambuf request_;
+		// boost::asio::streambuf response_;
 };
 
 #endif // _FTPSESSION_H_

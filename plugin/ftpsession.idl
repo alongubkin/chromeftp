@@ -2,10 +2,9 @@
 	FtpSession();
 	~FtpSession();
 
-	callback void EmptyCallback();
+    callback void EmptyCallback();
 	callback void ErrorCallback(std::string message);
  
 	void Connect(std::string server, EmptyCallback? connectCallback, ErrorCallback? errorCallback);
 };
-
 

@@ -2,8 +2,14 @@
 <head>
 	<script>
 		window.onload = function() { 		
-			var plugin = document.getElementById('plugin');			
+			var plugin = document.getElementById('plugin');	
 			var ftp = plugin.FtpSession();
+
+            ftp.connect(ip, function() { 
+                alert("connected!");
+            }, function(msg) {
+                alert("Error: " + msg);
+            });
 		};
 	</script>
 </head>

@@ -23,7 +23,7 @@ void FtpSession::Connect(std::string& server, EmptyCallback *connectCallback, Er
 
 	resolver_->async_resolve(query,
 		boost::bind(&FtpSession::OnResolve, this,
-			boost::asio::placeholders::error,
+		    boost::asio::placeholders::error,
 			boost::asio::placeholders::iterator));
 }
 
