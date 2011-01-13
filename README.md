@@ -19,10 +19,10 @@ You will need a few things to compile the plugin:
 
 After installing those, open terminal/console and execute:
 
-`cd ~
-git clone git://github.com/alongubkin/chromeftp.git chromeftp
-cd chromeftp/plugin
-scons`
+    cd ~
+    git clone git://github.com/alongubkin/chromeftp.git chromeftp
+    cd chromeftp/plugin
+    scons
 
 Contributing
 ------------
