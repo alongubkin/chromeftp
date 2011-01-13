@@ -11,6 +11,6 @@
 
 	],
 	"plugins": [
-		{ "path": "plugins/libchromeftp.so" }
+		{ "path": "../plugin/libchromeftp.so" }
 	]
 }

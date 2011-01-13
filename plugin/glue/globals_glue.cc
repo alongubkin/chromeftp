@@ -45,12 +45,12 @@ NPClass *GetStaticNPClass(void)
   return &static_npclass;
 }
 enum {
-  SCOPE_FTP_SESSION,
+  SCOPE_CHROMEFTP,
   NUM_NAMESPACE_IDS
 };
 static NPIdentifier namespace_ids[NUM_NAMESPACE_IDS];
 static const NPUTF8 *namespace_names[NUM_NAMESPACE_IDS] = {
-  "FtpSession"
+  "chromeftp"
 };
 uint32_t GetStaticPropertyCount() {
   return 0 + 0 + NUM_NAMESPACE_IDS;
@@ -86,7 +86,7 @@ void StaticEnumeratePropertyHelper(NPIdentifier *output) {
 static void InitializeStaticIds(NPP npp) {
   NPN_GetStringIdentifiers(namespace_names, NUM_NAMESPACE_IDS,
   namespace_ids);
-glue::class_FtpSession::InitializeGlue(npp);
+glue::namespace_chromeftp::InitializeGlue(npp);
 }
 glue::globals::NPAPIObject *CreateRawStaticNPObject(NPP npp) {
   GLUE_PROFILE_START(npp, "createobject");
@@ -97,8 +97,8 @@ glue::globals::NPAPIObject *CreateRawStaticNPObject(NPP npp) {
 object->AllocateNamespaceObjects(NUM_NAMESPACE_IDS);
 object->set_names(namespace_ids);
 
-object->SetNamespaceObject(SCOPE_FTP_SESSION,
-glue::class_FtpSession::CreateRawStaticNPObject(npp));
+object->SetNamespaceObject(SCOPE_CHROMEFTP,
+glue::namespace_chromeftp::CreateRawStaticNPObject(npp));
   return object;
 }
 void RegisterObjectBases(glue::globals::NPAPIObject *namespace_object,
@@ -106,19 +106,19 @@ glue::globals::NPAPIObject *root_object) {
 
 {
   glue::globals::NPAPIObject *object =
-  namespace_object->GetNamespaceObjectByIndex(SCOPE_FTP_SESSION);
-  glue::class_FtpSession::RegisterObjectBases(object, root_object);
+  namespace_object->GetNamespaceObjectByIndex(SCOPE_CHROMEFTP);
+  glue::namespace_chromeftp::RegisterObjectBases(object, root_object);
 }
 }
 
-namespace class_FtpSession {
+namespace namespace_chromeftp {
 glue::globals::NPAPIObject *GetStaticNPObject(
 glue::globals::NPAPIObject *root_object) {
   glue::globals::NPAPIObject *parent =
   glue::GetStaticNPObject(root_object);
-  return parent->GetNamespaceObjectByIndex(SCOPE_FTP_SESSION);
+  return parent->GetNamespaceObjectByIndex(SCOPE_CHROMEFTP);
 }
-}  // namespace class_FtpSession
+}  // namespace namespace_chromeftp
 bool StaticInvokeDefault(NPObject *header,
 const NPVariant *args,
 uint32_t argCount,

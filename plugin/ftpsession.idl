@@ -1,10 +1,15 @@
+namespace chromeftp {
+[include="ftpsession.h", async]
+callback void FtpSessionConnectCallback();
+    
+[include="ftpsession.h", async]
+callback void FtpSessionErrorCallback(std::string message);
+    
 [binding_model=by_value, include="ftpsession.h"] class FtpSession {
-	FtpSession();
-	~FtpSession();
-
-    callback void EmptyCallback();
-	callback void ErrorCallback(std::string message);
- 
-	void Connect(std::string server, EmptyCallback? connectCallback, ErrorCallback? errorCallback);
+    FtpSession();
+    ~FtpSession();
+    
+    void Connect(std::string server, FtpSessionConnectCallback? connectCallback, FtpSessionErrorCallback? errorCallback);
 };
+}
 

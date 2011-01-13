@@ -6,7 +6,7 @@ A complete FTP client extension for Google Chrome.
 Technical Details
 -----------------
 
-This extension uses a NPAPI plugin for accessing the underlying OS file system and socket, as this is not possible with HTML5 alone. It is wrriten with C++ using the [Boost][2] library. The NPAPI plugin exposes methods to the extension JavaScript with [Nixysa][3] - a framework for generating glue code for NPAPI plugins.
+This extension uses a NPAPI plugin for accessing the underlying OS file system and socket, as this is not possible pure HTML5. The NPAPI plugin is wrriten with C++ using the [Boost][2] library. It exposes methods to the extension JavaScript with [Nixysa][3] - a framework for generating glue code for NPAPI plugins.
 
 
 Contributing

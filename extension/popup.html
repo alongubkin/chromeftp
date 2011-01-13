@@ -2,13 +2,13 @@
 <head>
 	<script>
 		window.onload = function() { 		
-			var plugin = document.getElementById('plugin');	
-			var ftp = plugin.FtpSession();
+			var plugin = document.getElementById('plugin');
+			var ftp = plugin.chromeftp.FtpSession();
 
-            ftp.connect(ip, function() { 
-                alert("connected!");
+            ftp.connect("1", function() { 
+                document.write("connected!");
             }, function(msg) {
-                alert("Error: " + msg);
+                document.write("Error: " + msg);
             });
 		};
 	</script>

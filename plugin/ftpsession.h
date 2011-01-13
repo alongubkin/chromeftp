@@ -3,40 +3,39 @@
 
 #include <string>
 
+#include <boost/shared_ptr.hpp>
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
 
+#include "callbacks.h"
+
 using boost::asio::ip::tcp;
 
+namespace chromeftp {
+
+typedef Closure FtpSessionConnectCallback;
+typedef Callback1<const std::string&> FtpSessionErrorCallback;
+
 class FtpSession {
-	public:
-		class EmptyCallback {
-			public: 
-				virtual void Run(); 
-		};
-		
-		class ErrorCallback {
-			public:
-				virtual void Run(std::string message);
-		};
+public:
+    FtpSession();
+    ~FtpSession();
 
-		FtpSession();
-		~FtpSession();
+    void Connect(std::string& server, FtpSessionConnectCallback *connectCallback, FtpSessionErrorCallback *errorCallback);
 
-		void Connect(std::string& server, EmptyCallback *connectCallback, ErrorCallback *errorCallback);
+private:
+    void OnResolve(const boost::system::error_code& err, tcp::resolver::iterator endpoint_iterator);
+    void OnConnect(const boost::system::error_code& err, tcp::resolver::iterator endpoint_iterator);
+      
+    boost::shared_ptr<FtpSessionConnectCallback> onconnect_;
+    boost::shared_ptr<FtpSessionErrorCallback> onerror_;
 
-	private:
-		void OnResolve(const boost::system::error_code& err, tcp::resolver::iterator endpoint_iterator);
-		void OnConnect(const boost::system::error_code& err, tcp::resolver::iterator endpoint_iterator);
+    tcp::resolver *resolver_;
+    tcp::socket *socket_;
 
-		EmptyCallback *connectCallback;
-		ErrorCallback *connectErrorCallback;
-
-		tcp::resolver *resolver_;
-		tcp::socket *socket_;
-
-		// boost::asio::streambuf request_;
-		// boost::asio::streambuf response_;
+    // boost::asio::streambuf request_;
+    // boost::asio::streambuf response_;
 };
+}
 
 #endif // _FTPSESSION_H_
