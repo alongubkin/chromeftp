@@ -30,8 +30,9 @@ private:
     boost::shared_ptr<FtpSessionConnectCallback> onconnect_;
     boost::shared_ptr<FtpSessionErrorCallback> onerror_;
 
-    tcp::resolver *resolver_;
-    tcp::socket *socket_;
+    boost::shared_ptr<boost::asio::io_service> io_service_;
+    boost::shared_ptr<tcp::resolver> resolver_;
+    boost::shared_ptr<tcp::socket> socket_;
 
     // boost::asio::streambuf request_;
     // boost::asio::streambuf response_;

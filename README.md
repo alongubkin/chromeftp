@@ -6,8 +6,23 @@ A complete FTP client extension for Google Chrome.
 Technical Details
 -----------------
 
-This extension uses a NPAPI plugin for accessing the underlying OS file system and socket, as this is not possible pure HTML5. The NPAPI plugin is wrriten with C++ using the [Boost][2] library. It exposes methods to the extension JavaScript with [Nixysa][3] - a framework for generating glue code for NPAPI plugins.
+This extension uses a NPAPI plugin for accessing the underlying OS file system and socket, as this is not possible with pure HTML5. The NPAPI plugin is wrriten in C++ using the [Boost][2] library. It exposes methods to the extension JavaScript with [Nixysa][3] - a framework for generating glue code for NPAPI plugins.
 
+Compilation
+-----------
+
+You will need a few things to compile the plugin:
+
+ - Git ([Linux][6], [Windows][7], [Mac][8])
+ - [SCons][4]
+ - [Boost][5]
+
+After installing those, open terminal/console and execute:
+
+`cd ~
+git clone git://github.com/alongubkin/chromeftp.git chromeftp
+cd chromeftp/plugin
+scons`
 
 Contributing
 ------------
@@ -45,3 +60,8 @@ THE SOFTWARE.
 [1]: http://github.com/alongubkin/chromeftp/issues
 [2]: http://www.boost.org/
 [3]: http://code.google.com/p/nixysa/
+[4]: http://www.scons.org/
+[5]: http://www.boost.org/doc/libs/1_45_0/more/getting_started/index.html
+[6]: http://help.github.com/linux-git-installation/
+[7]: http://help.github.com/win-git-installation/
+[8]: http://help.github.com/mac-git-installation/
