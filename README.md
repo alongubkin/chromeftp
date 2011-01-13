@@ -24,6 +24,13 @@ After installing those, open terminal/console and execute:
     cd chromeftp/plugin
     scons
 
+To add the extension to Chrome, follow the following steps:
+
+ 1. Click on the wrench icon on Chrome ![Wrench](http://code.google.com/chrome/extensions/images/toolsmenu.gif) and choose **Tools > Extensions** (On Mac, use **Windows > Extension**).
+ 2. If **Developer mode** has a + by it, click the + to add developer information to the page. The + changes to a -, and more buttons and information appear.
+ 3. Click the **Load unpacked extension** button. A file dialog appears
+ 4. In the file dialog, navigate to ~/chromeftp/extension/ and click **OK**.
+
 Contributing
 ------------
 
