@@ -11,7 +11,7 @@ This extension uses a NPAPI plugin for accessing the underlying OS file system a
 Compilation
 -----------
 
-You will need a few things to compile the plugin:
+You will need a few things to download and compile the plugin:
 
  - Git ([Linux][6], [Windows][7], [Mac][8])
  - [SCons][4]
@@ -39,7 +39,8 @@ Contributing
 3. Commit your changes.
 4. Push to the branch.
 5. Create an [issue][1] with a link to your branch.
-6. Enjoy a refreshing Coke and wait.
+
+Thakns!
 
 License
 -------
