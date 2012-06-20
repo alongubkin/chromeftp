@@ -19,7 +19,7 @@ typedef Callback1<const std::string&> FtpSessionErrorCallback;
 class FtpSession {
 public:
     FtpSession();
-    ~FtpSession();
+    // ~FtpSession();
 
     void Connect(std::string& server, FtpSessionConnectCallback *connectCallback, FtpSessionErrorCallback *errorCallback);
 

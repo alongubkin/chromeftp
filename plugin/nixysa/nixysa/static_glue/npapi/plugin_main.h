@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+
 #ifndef TOOLS_IDLGLUE_NG_STATIC_GLUE_NPAPI_PLUGIN_MAIN_H__
 #define TOOLS_IDLGLUE_NG_STATIC_GLUE_NPAPI_PLUGIN_MAIN_H__
 

@@ -2,15 +2,15 @@
 	"name": "Chrome FTP",
 	"version": "1.0",
 	"description": "FTP client for Google Chrome.",
+	"background_page": "background.html",
 	"browser_action": {
 		"default_icon": "assets/images/icon.png",
-		"default_title": "Chrome FTP",
-		"default_popup": "popup.html"
+		"default_title": "Chrome FTP"
 	},
 	"permissions": [
 
 	],
 	"plugins": [
-		{ "path": "../plugin/libchromeftp.so" }
+		{ "path": "../plugin/build/npchromeftp.dll" }
 	]
 }

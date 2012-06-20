@@ -1,5 +1,5 @@
-#ifndef GLUE_GLOBALS_GLUE_H__
-#define GLUE_GLOBALS_GLUE_H__
+#ifndef ___GLUE_GLOBALS_GLUE_H__
+#define ___GLUE_GLOBALS_GLUE_H__
 
 #include <string.h>
 #include <string>
@@ -42,4 +42,4 @@ glue::globals::NPAPIObject *CreateStaticNPObject(NPP npp);
 
 }  // namespace glue
 
-#endif  // GLUE_GLOBALS_GLUE_H__
+#endif  // ___GLUE_GLOBALS_GLUE_H__

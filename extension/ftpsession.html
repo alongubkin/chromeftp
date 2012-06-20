@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>ChromeFTP</title>
+	
+	<script>
+		/*window.onload = function() { 		
+			var plugin = document.getElementById('plugin');
+			var ftp = new plugin.chromeftp.FtpSession();
+
+            ftp.connect("dooble.co", function() { 
+                document.write("connected!");
+            }, function(msg) {
+                document.write("Error: " + msg);
+            });
+		};*/
+	</script>
+</head>
+<body>
+	<!--
+	<embed type="application/x-chromeftp::chromeftp" id="plugin" width="0" height="0" />
+	-->
+	
+	<div>
+		<select id="hosts-select">
+		
+		</select>
+		<button id="hosts-examplebutton" />
+	</div>
+	
+	<!--
+	<div id="login-form">
+		<div>
+			<label for="host">Host:</label>
+			<input type="text" id="host" name="host" />
+		</div>
+		
+		<div>
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" />
+		</div>
+		
+		<div>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" />
+		</div>
+		
+		<button></button>
+	</div>
+	-->
+
+	<script src="assets/js/libs/jquery-1.6.2.min.js"></script>
+	<script src="assets/js/utils.js"></script>	
+	<script src="assets/js/ftpsession.js"></script>	
+</body>
+</html>

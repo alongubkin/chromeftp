@@ -1,0 +1,13 @@
+<html>
+<head>
+	<script>	
+		chrome.browserAction.onClicked.addListener(function(tab) {
+			chrome.tabs.create({'url': chrome.extension.getURL('ftpsession.html')}, function(tab) {
+			});
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>

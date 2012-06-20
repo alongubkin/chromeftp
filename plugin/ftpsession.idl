@@ -7,7 +7,7 @@ callback void FtpSessionErrorCallback(std::string message);
     
 [binding_model=by_value, include="ftpsession.h"] class FtpSession {
     FtpSession();
-    ~FtpSession();
+    // ~FtpSession();
     
     void Connect(std::string server, FtpSessionConnectCallback? connectCallback, FtpSessionErrorCallback? errorCallback);
 };

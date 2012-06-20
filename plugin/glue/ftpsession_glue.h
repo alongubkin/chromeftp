@@ -1,5 +1,5 @@
-#ifndef GLUE_FTPSESSION_GLUE_H__
-#define GLUE_FTPSESSION_GLUE_H__
+#ifndef ___GLUE_FTPSESSION_GLUE_H__
+#define ___GLUE_FTPSESSION_GLUE_H__
 
 #include <string.h>
 #include <string>
@@ -138,4 +138,4 @@ const char **error_handle);
 }  // namespace namespace_chromeftp
 }  // namespace glue
 
-#endif  // GLUE_FTPSESSION_GLUE_H__
+#endif  // ___GLUE_FTPSESSION_GLUE_H__
